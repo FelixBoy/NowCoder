@@ -12,7 +12,6 @@ public class XiaoDongFengPingGuo {
 		 System.out.println(getInitial(3));
 	 }
 	 public static int getInitial(int n) {
-	        // write code here
 	       for(int i = n+1; ; i++){
 	            int temp = i;
 	            int bear = n;
