@@ -17,8 +17,8 @@ public class XiaoDongFengPingGuo {
 	            int temp = i;
 	            int bear = n;
 	            while(bear > 0){
-	                if(temp%bear == 1){
-	                    temp = temp - temp/n - 1;
+	                if(temp%n == 1){
+	                    temp  =  temp - temp/n - 1;
 	                    bear--;
 	                }else{
 	                    break;
@@ -28,5 +28,5 @@ public class XiaoDongFengPingGuo {
 	                return i;
 	            }
 	        }
-	    }
+	 }
 }
