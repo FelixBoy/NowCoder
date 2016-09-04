@@ -26,9 +26,11 @@ public class PuKePaiShunZi {
 		  if(numbers == null || numbers.length == 0){
 			  return false;
 		  }
+		  //先排序
 		  Arrays.sort(numbers);
 		  int kingCount = 0;
 		  int i = 0;
+		  //统计王的个数
 		  for(;i < numbers.length; i++){
 			  if(numbers[i] == 0){
 				  kingCount++;
@@ -36,17 +38,19 @@ public class PuKePaiShunZi {
 				  break;
 			  }
 		  }
+		  //统计非王的牌之间的差值和。
 		  int difLen = 0;
 		  while(i < numbers.length - 1){
               int dif = numbers[i + 1] - numbers[i];
+              //如果出现非王的牌，相等，则肯定不能组成顺子
               if(dif == 0){
                   return false;
               }else{
                   difLen = difLen + dif - 1;
-			  		
               }
 			i++;
 		  }
+		  //看看王的数量，够不够填差值的坑
 		  if(kingCount >= difLen){
 			  return true;
 		  }else{
